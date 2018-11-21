@@ -15,48 +15,44 @@ public class Coordinador {
     
     
     public String ingresarAtributos(){
-        JOptionPane.showInputDialog("Escoja una opcion:\n"
+        String obj= JOptionPane.showInputDialog("Escoja una opcion:\n"
                 + "1.- Ingresar placa"
                 + "\n2.-Ingresar chasis"
                 + "\n3.-Ingresar color"
                 + "\n4.-Ingresar marca"
                 + "\n5.-Ingresar modelo");
-        return ;
+        return obj;
     }
     public String retornarAtributos(){
-        JOptionPane.showInputDialog("Escoja una opcion:\n"
+        String op=JOptionPane.showInputDialog("Escoja una opcion:\n"
                 + "1.-Retornar placa"
                 + "\n2.-Retornar chasis"
                 + "\n3.-Retornar color"
                 + "\n4.-Retornar marca"
                 + "\n5.-Retornar modelo");
-        return ; 
+        return op;
     } 
     
     public String opcionesMenu(){
-        JOptionPane.showInputDialog("Ingresa una opcion:\n"
+        String ob=JOptionPane.showInputDialog("Ingresa una opcion:\n"
                 + "1.- Ingresar atributos\n"
                 + "2.- Retornar atributos\n"
                 + "3.- Salir\n");
-        return ;
+        return ob;
     }
     
     public void menu(){
         String op="";
         do{
-            opcionesMenu();
+            op=opcionesMenu();
             switch(op){
                 case "1":
-                    JOptionPane.showInputDialog(ingresarAtributos());
+                    ingresarAtributos();
                     break;
                 case "2":
                     retornarAtributos();
                     break;
-                case "3": 
-                    System.exit(3);
-                    break;
             }    
         }while(!op.equals("3"));
-    }   
-
+    }  
 }
